@@ -26,8 +26,6 @@ jobs:
 
       - name: Start the application
         run: yarn dev
-        env:
-          CI: true
 
       - name: Wait for the app to be available
         run: npx wait-on http://localhost:5173
