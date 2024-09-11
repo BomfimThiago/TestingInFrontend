@@ -24,16 +24,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Start the application
-        run: yarn dev
-
-      - name: Wait for the app to be available
-        run: npx wait-on http://localhost:5173
-
-      - name: Run Cypress tests
-        run: yarn cy:run
-        env:
-          CYPRESS_BASE_URL: http://localhost:5173
+      - name: Test
+        uses: cypress-io/github-action@v5
+        with:
+          wait-on: http://localhost:5173
+          start: npx vite --host
 
       # Upload Cypress videos and screenshots only if tests fail
       - name: Upload Cypress videos and screenshots
