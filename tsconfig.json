@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "ESNext", // ou ES2020, ES6
+    "target": "ES2020", // ou ESNext, ES6
+    "moduleResolution": "node"
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
