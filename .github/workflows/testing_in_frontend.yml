@@ -25,12 +25,9 @@ jobs:
         run: yarn install
 
       - name: Start the application
-        run: yarn start &
+        run: yarn start
         env:
           CI: true
-
-      - name: Wait for the app to be available
-        run: npx wait-on http://localhost:5173
 
       - name: Run Cypress tests
         run: yarn cy:run
