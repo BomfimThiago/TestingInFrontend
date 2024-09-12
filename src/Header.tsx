@@ -12,8 +12,7 @@ const Header: React.FC = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulando o login (aqui você pode adicionar sua lógica de autenticação)
-    if (email === 'userrr@example.com' && password === 'password') {
+    if (email === 'user@example.com' && password === 'password') {
       setUser({ email, password });
     } else {
       alert('Invalid credentials');
@@ -21,7 +20,6 @@ const Header: React.FC = () => {
   };
 
   const handleLogout = () => {
-    // Simulando o logout
     setUser(null);
     setEmail('');
     setPassword('');
